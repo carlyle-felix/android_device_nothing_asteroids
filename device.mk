@@ -5,7 +5,6 @@
 
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 $(call inherit-product, vendor/nothing/asteroids/asteroids-vendor.mk)
-$(call inherit-product-if-exists, hardware/dolby/dolby.mk)
 
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/vabc_features.mk)
@@ -102,7 +101,6 @@ PRODUCT_PACKAGES += \
     libvolumelistener \
     sound_trigger.primary.volcano
 
-
 # Biometrics
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
@@ -158,7 +156,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.composer-service \
     vendor.qti.hardware.display.demura-service
 
-
 # eUICC
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_JPN/android.hardware.telephony.euicc.xml \
@@ -183,12 +180,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
-
-# Graphics
-PRODUCT_REQUIRES_INSECURE_EXECMEM_FOR_SWIFTSHADER := true
-
+# Fstab
 PRODUCT_PACKAGES += \
-    vulkan.pastel
+    fstab.default \
+    fstab.default.vendor_ramdisk \
+    fstab.zram
 
 # Glyph
 PRODUCT_PACKAGES += \
@@ -205,10 +201,8 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \
     android.hardware.health-service.qti_recovery 
 
+# Init
 PRODUCT_PACKAGES += \
-    fstab.default \
-    fstab.default.vendor_ramdisk \
-    fstab.zram \
     init.asteroids.hw.rc \
     init.asteroids.nfc.sh \
     init.asteroids.rc \
@@ -278,13 +272,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-hal-st54j-PRO.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st54j-PRO.conf \
     $(LOCAL_PATH)/configs/nfc/libnfc-nci-JPN.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci-JPN.conf
 
-# Nothing-fwk
-PRODUCT_PACKAGES += \
-    nothing-fwk
-
-PRODUCT_BOOT_JARS += \
-    nothing-fwk
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_JPN/android.hardware.nfc.ese.xml \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
@@ -293,6 +280,13 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.st
+
+# Nothing-fwk
+PRODUCT_PACKAGES += \
+    nothing-fwk
+
+PRODUCT_BOOT_JARS += \
+    nothing-fwk
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -505,4 +499,3 @@ PRODUCT_PACKAGES += \
     libwifi-hal-qcom \
     wpa_supplicant \
     wpa_supplicant.conf
-
