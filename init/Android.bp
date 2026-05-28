@@ -94,9 +94,3 @@ sh_binary {
     src: "init.qcom.sh",
     vendor: true,
 }
-
-sh_binary {
-    name: "system_dlkm_modprobe.sh",
-    src: "system_dlkm_modprobe.sh",
-    vendor: true,
-}
