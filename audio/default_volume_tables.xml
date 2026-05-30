@@ -39,7 +39,7 @@
         <point>20,-4000</point>
         <point>60,-1700</point>
         <point>100,0</point> -->
-        <point>1,-7000</point>
+        <point>1,-6000</point>
         <point>10,-5673</point>
         <point>20,-4709</point>
         <point>30,-3821</point>
@@ -49,7 +49,7 @@
         <point>70,-1645</point>
         <point>80,-1164</point>
         <point>90,-682</point>
-        <point>100,-200</point>
+        <point>100,0</point>
     </reference>
     <reference name="DEFAULT_DEVICE_CATEGORY_HEADSET_VOLUME_CURVE">
     <!--Default Volume Curve -->
