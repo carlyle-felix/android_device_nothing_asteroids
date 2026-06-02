@@ -56,6 +56,7 @@ vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so
 vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so
 vendor/lib64/egl/libq3dtools_esx.so
 vendor/lib64/hw/vulkan.adreno.so
+vendor/lib64/hw/vulkan.pastel.so
 vendor/lib64/libCB.so
 vendor/lib64/libOpenCL.so
 vendor/lib64/libOpenCL_adreno.so
@@ -944,6 +945,11 @@ vendor/lib64/libtestutils.so
 vendor/lib64/libtinyxml2_1.so
 vendor/lib64/libvmfilexfer.so
 vendor/lib64/vendor.hardware.light-V1-ndk_platform.so
+
+# Display config
+vendor/etc/displayconfig/display_id_4630946978939328130.xml
+vendor/etc/displayconfig/display_id_4630947039571902850.xml
+vendor/etc/displayconfig/display_id_4630947039571902851.xml
 
 # eUICC
 product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
