@@ -353,7 +353,7 @@
             "Values": [
                 "0",
                 "20",
-                "35"
+                "30"
             ],
             "DefaultIndex": 0,
             "ResetOnInit": true
@@ -374,7 +374,7 @@
         {
             "PowerHint": "SUSTAINED_PERFORMANCE",
             "Node": "GPUMinFreq",
-            "Value": "362000000",
+            "Value": "510000000",
             "Duration": 0
         },
         {
@@ -404,26 +404,26 @@
         {
             "PowerHint": "INTERACTION",
             "Node": "LittleClusterMinFreq",
-            "Value": "787200",
-            "Duration": 150
+            "Value": "1017600",
+            "Duration": 0
         },
 		{
             "PowerHint": "INTERACTION",
             "Node": "BigClusterMinFreq",
-            "Value": "940800",
-            "Duration": 150
+            "Value": "1190400",
+            "Duration": 0
         },
 		{
             "PowerHint": "INTERACTION",
             "Node": "PrimeCoreMinFreq",
-            "Value": "787200",
-            "Duration": 150
+            "Value": "1094400",
+            "Duration": 0
         },
 		{
 			"PowerHint": "INTERACTION",
 			"Node": "TopAppCPUUclampMin",
 			"Value": "20",
-			"Duration": 300
+			"Duration": 500
 		},
         {
             "PowerHint": "LAUNCH",
