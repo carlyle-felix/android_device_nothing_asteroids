@@ -215,7 +215,7 @@ PRODUCT_PACKAGES += \
 
 # Kernel
  PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system_dlkm.modules.blocklist:$(TARGET_COPY_OUT_VENDOR_DLKM)/lib/modules/system_dlkm.modules.blocklist
+    $(LOCAL_PATH)/modules/system_dlkm.modules.blocklist:$(TARGET_COPY_OUT_VENDOR_DLKM)/lib/modules/system_dlkm.modules.blocklist
 
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -228,7 +228,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore_V3.xml
-
 
 # Lineage Health
 $(call soong_config_set,lineage_health,charging_control_charging_path,/proc/charger/usb_charger_en)
