@@ -163,17 +163,9 @@ PRODUCT_PACKAGES += \
     default-permissions-com.google.android.euicc.xml \
     privapp-permissions-com.google.android.euicc.xml
 
-# FWK Detect
-PRODUCT_PACKAGES += \
-    libvndfwk_detect_jni.qti_vendor
-
 # Fastboot
 PRODUCT_PACKAGES += \
     fastbootd
-
-# GPS
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
 # Fstab
 PRODUCT_PACKAGES += \
@@ -181,20 +173,28 @@ PRODUCT_PACKAGES += \
     fstab.default.vendor_ramdisk \
     fstab.zram
 
+# FWK Detect
+PRODUCT_PACKAGES += \
+    libvndfwk_detect_jni.qti_vendor
+
 # Glyph
 PRODUCT_PACKAGES += \
     ParanoidGlyphPhone3a \
     GlyphAdapter
 
-# HIDL
-PRODUCT_PACKAGES += \
-    android.hidl.allocator@1.0-service \
-    hwservicemanager
+# GPS
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \
     android.hardware.health-service.qti_recovery 
+
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.allocator@1.0-service \
+    hwservicemanager
 
 # Init
 PRODUCT_PACKAGES += \
@@ -334,7 +334,8 @@ PRODUCT_PACKAGES += \
     libqti-perfd-client
     
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+    $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
+    $(LOCAL_PATH)/configs/power/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
@@ -349,20 +350,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 # Secure Element
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_JPN/android.hardware.se.omapi.ese.xml
-
-# Sku properties
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/sku/build_EEA.prop:$(TARGET_COPY_OUT_ODM)/etc/build_EEA.prop \
-    $(LOCAL_PATH)/sku/build_IND.prop:$(TARGET_COPY_OUT_ODM)/etc/build_IND.prop \
-    $(LOCAL_PATH)/sku/build_JPN.prop:$(TARGET_COPY_OUT_ODM)/etc/build_JPN.prop \
-    $(LOCAL_PATH)/sku/build_TUR.prop:$(TARGET_COPY_OUT_ODM)/etc/build_TUR.prop \
-    $(LOCAL_PATH)/sku/build_ProEEA.prop:$(TARGET_COPY_OUT_ODM)/etc/build_ProEEA.prop \
-    $(LOCAL_PATH)/sku/build_ProIND.prop:$(TARGET_COPY_OUT_ODM)/etc/build_ProIND.prop \
-    $(LOCAL_PATH)/sku/build_ProROW.prop:$(TARGET_COPY_OUT_ODM)/etc/build_ProROW.prop \
-    $(LOCAL_PATH)/sku/build_ProTUR.prop:$(TARGET_COPY_OUT_ODM)/etc/build_ProTUR.prop
-
-PRODUCT_PACKAGES += \
-    android.hardware.secure_element-service.thales
 
 # Security
 BOOT_SECURITY_PATCH := 2026-05-01
@@ -384,6 +371,20 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors-service.asteroids-multihal \
     sensors.asteroids \
     sensors.dynamic_sensor_hal
+
+# Sku properties
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/sku/build_EEA.prop:$(TARGET_COPY_OUT_ODM)/etc/build_EEA.prop \
+    $(LOCAL_PATH)/sku/build_IND.prop:$(TARGET_COPY_OUT_ODM)/etc/build_IND.prop \
+    $(LOCAL_PATH)/sku/build_JPN.prop:$(TARGET_COPY_OUT_ODM)/etc/build_JPN.prop \
+    $(LOCAL_PATH)/sku/build_TUR.prop:$(TARGET_COPY_OUT_ODM)/etc/build_TUR.prop \
+    $(LOCAL_PATH)/sku/build_ProEEA.prop:$(TARGET_COPY_OUT_ODM)/etc/build_ProEEA.prop \
+    $(LOCAL_PATH)/sku/build_ProIND.prop:$(TARGET_COPY_OUT_ODM)/etc/build_ProIND.prop \
+    $(LOCAL_PATH)/sku/build_ProROW.prop:$(TARGET_COPY_OUT_ODM)/etc/build_ProROW.prop \
+    $(LOCAL_PATH)/sku/build_ProTUR.prop:$(TARGET_COPY_OUT_ODM)/etc/build_ProTUR.prop
+
+PRODUCT_PACKAGES += \
+    android.hardware.secure_element-service.thales
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
@@ -433,6 +434,12 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.qti
 
+# Update Engine
+PRODUCT_PACKAGES += \
+    update_engine \
+    update_engine_sideload \
+    update_verifier
+
 # USB
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
@@ -447,12 +454,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/usb/etc
-
-# Update Engine
-PRODUCT_PACKAGES += \
-    update_engine \
-    update_engine_sideload \
-    update_verifier
 
 # Vendor Service Manager
 PRODUCT_PACKAGES += \

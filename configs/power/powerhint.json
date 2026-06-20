@@ -2,7 +2,9 @@
     "Nodes": [
         {
             "Name": "GPUMinFreq",
-            "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/min_freq",
+            "Paths": [
+                "/sys/class/kgsl/kgsl-3d0/devfreq/min_freq"
+            ],
             "Values": [
                 "1050000000",
                 "960000000",
@@ -18,18 +20,23 @@
         },
         {
             "Name": "GPUMaxFreq",
-            "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/max_freq",
+            "Paths": [
+                "/sys/class/kgsl/kgsl-3d0/devfreq/max_freq"
+            ],
             "Values": [
                 "1050000000",
                 "960000000",
-                "895000000"
+                "895000000",
+                "763000000"
             ],
             "DefaultIndex": 0,
             "ResetOnInit": true
         },
         {
             "Name": "DDRMinFreq",
-            "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/min_freq",
+            "Paths": [
+                "/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/min_freq"
+            ],
             "Values": [
                 "547000",
                 "681000",
@@ -40,117 +47,21 @@
         },
         {
             "Name": "CPUMinCores",
-            "Path": "/sys/devices/system/cpu/cpu0/core_ctl/min_cpus",
+            "Paths": [
+                "/sys/devices/system/cpu/cpu0/core_ctl/min_cpus"
+            ],
             "Values": [
                 "1",
                 "3"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "LittleClusterWaltAdaptiveHighFreq",
-            "Path": "/sys/devices/system/cpu/cpufreq/policy0/walt/adaptive_high_freq",
-            "Values": [
-                "0",
-                "1708800"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "BigClusterWaltAdaptiveHighFreq",
-            "Path": "/sys/devices/system/cpu/cpufreq/policy4/walt/adaptive_high_freq",
-            "Values": [
-                "0",
-                "1612800"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "PrimeCoreWaltAdaptiveHighFreq",
-            "Path": "/sys/devices/system/cpu/cpufreq/policy7/walt/adaptive_high_freq",
-            "Values": [
-                "0",
-                "1766400"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "LittleClusterWaltAdaptiveLowFreq",
-            "Path": "/sys/devices/system/cpu/cpufreq/policy0/walt/adaptive_low_freq",
-            "Values": [
-                "0",
-                "1228800"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "BigClusterWaltAdaptiveLowFreq",
-            "Path": "/sys/devices/system/cpu/cpufreq/policy4/walt/adaptive_low_freq",
-            "Values": [
-                "0",
-                "1056000"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "PrimeCoreWaltAdaptiveLowFreq",
-            "Path": "/sys/devices/system/cpu/cpufreq/policy7/walt/adaptive_low_freq",
-            "Values": [
-                "0",
-                "1209600"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "DDRSampleMs",
-            "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/sample_ms",
-            "Values": [
-                "10",
-                "16",
-                "33"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "DDRHystLength",
-            "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/hyst_length",
-            "Values": [
-                "0"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "DDRHistMemory",
-            "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/hist_memory",
-            "Values": [
-                "20",
-                "0"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "DDRHystTriggerCount",
-            "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/hyst_trigger_count",
-            "Values": [
-                "3",
-                "0"
-            ],
+                ],
             "DefaultIndex": 0,
             "ResetOnInit": true
         },
         {
             "Name": "BigClusterWaltPL",
-            "Path": "/sys/devices/system/cpu/cpu4/cpufreq/walt/pl",
+            "Paths": [
+                "/sys/devices/system/cpu/cpu4/cpufreq/walt/pl"
+            ],
             "Values": [
                 "0"
             ],
@@ -159,7 +70,9 @@
         },
         {
             "Name": "BigClusterWaltHispeedLoad",
-            "Path": "/sys/devices/system/cpu/cpu4/cpufreq/walt/hispeed_load",
+            "Paths": [
+                "/sys/devices/system/cpu/cpu4/cpufreq/walt/hispeed_load"
+            ],
             "Values": [
                 "85",
                 "99"
@@ -169,7 +82,9 @@
         },
         {
             "Name": "LittleClusterCoreCtlEnable",
-            "Path": "/sys/devices/system/cpu/cpu0/core_ctl/enable",
+            "Paths": [
+                "/sys/devices/system/cpu/cpu0/core_ctl/enable"
+            ],
             "Values": [
                 "0"
             ],
@@ -178,7 +93,9 @@
         },
         {
             "Name": "LittleClusterWaltPL",
-            "Path": "/sys/devices/system/cpu/cpu0/cpufreq/walt/pl",
+            "Paths": [
+                "/sys/devices/system/cpu/cpu0/cpufreq/walt/pl"
+            ],
             "Values": [
                 "0"
             ],
@@ -187,7 +104,9 @@
         },
         {
             "Name": "LittleClusterWaltHispeedLoad",
-            "Path": "/sys/devices/system/cpu/cpu0/cpufreq/walt/hispeed_load",
+            "Paths": [
+                "/sys/devices/system/cpu/cpu0/cpufreq/walt/hispeed_load"
+            ],
             "Values": [
                 "90",
                 "99"
@@ -196,44 +115,17 @@
             "ResetOnInit": true
         },
         {
-            "Name": "DDRIOPercent",
-            "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/io_percent",
-            "Values": [
-                "68",
-                "100"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "DDRABScale",
-            "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/ab_scale",
-            "Values": [
-                "100",
-                "50"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "CpuDmaLatency",
-            "Path": "/dev/cpu_dma_latency",
-            "Values": [
-                "16000",
-                "1"
-            ],
-            "HoldFd": true
-        },
-        {
             "Name": "LittleClusterMaxFreq",
-            "Path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq",
+            "Paths": [
+                "/sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq"
+            ],
             "Values": [
-                "1804800",  
-                "1708800",  
-                "1593600",  
-                "1497600",  
-                "1344000",  
-                "1228800",  
+                "1804800",
+                "1708800",
+                "1593600",
+                "1497600",
+                "1344000",
+                "1228800",
                 "1113600",
                 "1017600",
                 "902400",
@@ -246,7 +138,9 @@
         },
         {
             "Name": "LittleClusterMinFreq",
-            "Path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq",
+            "Paths": [
+                "/sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq"
+            ],
             "Values": [
                 "1804800",
                 "1708800",
@@ -264,9 +158,11 @@
             ],
             "ResetOnInit": true
         },
-		{
+        {
             "Name": "BigClusterMaxFreq",
-            "Path": "/sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq",
+            "Paths": [
+                "/sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq"
+            ],
             "Values": [
                 "2400000",
                 "2208000",
@@ -280,29 +176,33 @@
             "DefaultIndex": 0,
             "ResetOnInit": true
         },
-		{
+        {
             "Name": "BigClusterMinFreq",
-            "Path": "/sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq",
+            "Paths": [
+                "/sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq"
+            ],
             "Values": [
-              "1824000",
-              "1708800",
-              "1612800",
-              "1497600",
-              "1401600",
-              "1286400",
-              "1190400",
-              "1056000",
-              "940800",
-              "787200",
-              "633600",
-              "480000",
-              "0"
+                "1824000",
+                "1708800",
+                "1612800",
+                "1497600",
+                "1401600",
+                "1286400",
+                "1190400",
+                "1056000",
+                "940800",
+                "787200",
+                "633600",
+                "480000",
+                "0"
             ],
             "ResetOnInit": true
         },
         {
             "Name": "PrimeCoreMaxFreq",
-            "Path": "/sys/devices/system/cpu/cpufreq/policy7/scaling_max_freq",
+            "Paths": [
+                "/sys/devices/system/cpu/cpufreq/policy7/scaling_max_freq"
+            ],
             "Values": [
                 "2496000",
                 "2304000",
@@ -319,7 +219,9 @@
         },
         {
             "Name": "PrimeCoreMinFreq",
-            "Path": "/sys/devices/system/cpu/cpufreq/policy7/scaling_min_freq",
+            "Paths": [
+                "/sys/devices/system/cpu/cpufreq/policy7/scaling_min_freq"
+            ],
             "Values": [
                 "1459200",
                 "1324800",
@@ -333,60 +235,28 @@
             ],
             "ResetOnInit": true
         },
-		{
-      		"Name": "TopAppCPUUclampMin",
-	 		"Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
-      		"Values": [
-				"0",
-				"15",
-				"20",
-                "35",
-                "40",
-                "max"
-			],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-    	},
         {
-            "Name": "BackgroundCPUUclampMin",
-            "Path": "/dev/cpuctl/background/cpu.uclamp.min",
-            "Values": [
-                "0",
-                "20",
-                "30"
+            "Name": "ADPF_HOOK",
+            "Paths": [
+                "<AdpfConfig>:SURFACEFLINGER"
             ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "BackgroundCPUUclampMax",
-            "Path": "/dev/cpuctl/background/cpu.uclamp.max",
             "Values": [
-                "max",
-				"50",
-                "35"
+                "ADPF_DEFAULT"
             ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
+            "Type": "Event"
         }
     ],
     "Actions": [
-        {
+	{
             "PowerHint": "SUSTAINED_PERFORMANCE",
             "Node": "GPUMinFreq",
-            "Value": "510000000",
+            "Value": "264000000",
             "Duration": 0
         },
         {
             "PowerHint": "SUSTAINED_PERFORMANCE",
             "Node": "GPUMaxFreq",
-            "Value": "1050000000",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "SUSTAINED_PERFORMANCE",
-            "Node": "BackgroundCPUUclampMax",
-            "Value": "35",
+            "Value": "763000000",
             "Duration": 0
         },
         {
@@ -404,110 +274,62 @@
         {
             "PowerHint": "INTERACTION",
             "Node": "LittleClusterMinFreq",
-            "Value": "1017600",
+            "Value": "787200",
             "Duration": 0
         },
-		{
+        {
             "PowerHint": "INTERACTION",
             "Node": "BigClusterMinFreq",
-            "Value": "1190400",
+            "Value": "1056000",
             "Duration": 0
         },
-		{
+        {
             "PowerHint": "INTERACTION",
             "Node": "PrimeCoreMinFreq",
-            "Value": "1094400",
+            "Value": "960000",
             "Duration": 0
         },
-		{
-			"PowerHint": "INTERACTION",
-			"Node": "TopAppCPUUclampMin",
-			"Value": "20",
-			"Duration": 500
-		},
         {
-            "PowerHint": "LAUNCH",
-            "Node": "TopAppCPUUclampMin",
-            "Value": "40",
-            "Duration": 1200
+            "PowerHint": "EXPENSIVE_RENDERING",
+            "Node": "DDRMinFreq",
+            "Value": "681000",
+            "Duration": 0
         },
         {
-            "PowerHint": "LAUNCH",
-            "Node": "BackgroundCPUUclampMax",
-            "Value": "50",
-            "Duration": 2000
+            "PowerHint": "EXPENSIVE_RENDERING",
+            "Node": "ADPF_HOOK",
+            "Value": "ADPF_DEFAULT",
+            "Duration": 0
         },
         {
-            "PowerHint": "LAUNCH",
-            "Node": "GPUMinFreq",
-            "Value": "510000000",
-            "Duration": 1000
-        },
-        {
-            "PowerHint": "LAUNCH",
+            "PowerHint": "GAME",
             "Node": "DDRMinFreq",
             "Value": "1353600",
             "Duration": 1000
         },
         {
+            "PowerHint": "GAME",
+            "Node": "ADPF_HOOK",
+            "Value": "ADPF_DEFAULT",
+            "Duration": 0
+        },
+        {
+            "PowerHint": "FIXED_PERFORMANCE",
+            "Node": "ADPF_HOOK",
+            "Value": "ADPF_DEFAULT",
+            "Duration": 0
+        },
+	{
             "PowerHint": "LAUNCH",
-            "Node": "LittleClusterWaltAdaptiveHighFreq",
-            "Value": "1708800",
+            "Node": "GPUMinFreq",
+            "Value": "362000000",
+            "Duration": 0
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "DDRMinFreq",
+            "Value": "681000",
             "Duration": 1000
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "BigClusterWaltAdaptiveHighFreq",
-            "Value": "1612800",
-            "Duration": 1000
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "PrimeCoreWaltAdaptiveHighFreq",
-            "Value": "1766400",
-            "Duration": 1000
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "LittleClusterWaltAdaptiveLowFreq",
-            "Value": "1228800",
-            "Duration": 2000
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "BigClusterWaltAdaptiveLowFreq",
-            "Value": "1056000",
-            "Duration": 2000
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "PrimeCoreWaltAdaptiveLowFreq",
-            "Value": "1209600",
-            "Duration": 2000
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_LOW",
-            "Node": "DDRSampleMs",
-            "Value": "33",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_LOW",
-            "Node": "DDRHystLength",
-            "Value": "0",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_LOW",
-            "Node": "DDRHistMemory",
-            "Value": "0",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_LOW",
-            "Node": "DDRHystTriggerCount",
-            "Value": "0",
-            "Duration": 0
         },
         {
             "PowerHint": "CAMERA_STREAMING_LOW",
@@ -524,30 +346,6 @@
         {
             "PowerHint": "CAMERA_STREAMING_LOW",
             "Node": "LittleClusterCoreCtlEnable",
-            "Value": "0",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_MID",
-            "Node": "DDRSampleMs",
-            "Value": "33",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_MID",
-            "Node": "DDRHystLength",
-            "Value": "0",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_MID",
-            "Node": "DDRHistMemory",
-            "Value": "0",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_MID",
-            "Node": "DDRHystTriggerCount",
             "Value": "0",
             "Duration": 0
         },
@@ -583,36 +381,6 @@
         },
         {
             "PowerHint": "CAMERA_STREAMING_HIGH",
-            "Node": "DDRSampleMs",
-            "Value": "16",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_HIGH",
-            "Node": "DDRIOPercent",
-            "Value": "100",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_HIGH",
-            "Node": "DDRHystLength",
-            "Value": "0",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_HIGH",
-            "Node": "DDRHistMemory",
-            "Value": "0",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_HIGH",
-            "Node": "DDRHystTriggerCount",
-            "Value": "0",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_HIGH",
             "Node": "DDRMinFreq",
             "Value": "1353600",
             "Duration": 0
@@ -640,18 +408,52 @@
             "Node": "LittleClusterCoreCtlEnable",
             "Value": "0",
             "Duration": 0
-        },
+        }
+    ],
+    "AdpfConfig": [
         {
-            "PowerHint": "CAMERA_STREAMING_HIGH",
-            "Node": "DDRABScale",
-            "Value": "50",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_LAUNCH",
-            "Node": "CpuDmaLatency",
-            "Value": "1",
-            "Duration": 1000
+            "Name": "ADPF_DEFAULT",
+            "PID_On": true,
+            "PID_Po": 3.0,
+            "PID_Pu": 0.6,
+            "PID_I": 0.0,
+            "PID_I_Init": 200,
+            "PID_I_High": 512,
+            "PID_I_Low": -30,
+            "PID_Do": 500.0,
+            "PID_Du": 0.0,
+            "UclampMin_On": true,
+            "UclampMin_Init": 256,
+            "UclampMin_LoadUp": 480,
+            "UclampMin_LoadReset": 480,
+            "UclampMin_High":480,
+            "UclampMin_Low": 2,
+            "UclampMax_EfficientBase": 500,
+            "UclampMax_EfficientOffset": 200,
+            "SamplingWindow_P": 1,
+            "SamplingWindow_I": 0,
+            "SamplingWindow_D": 1,
+            "ReportingRateLimitNs": 16666666,
+            "TargetTimeFactor": 1.0,
+            "StaleTimeFactor": 15.0,
+            "GpuBoost": true,
+            "GpuCapacityBoostMax": 45000,
+            "HeuristicBoost_On": true,
+            "HBoostModerateJankThreshold":3,
+            "HBoostOffMaxAvgDurRatio": 4.0,
+            "HBoostSevereJankPidPu": 0.3,
+            "HBoostSevereJankThreshold": 5,
+            "HBoostUclampMinCeilingRange": [
+                480,
+                722
+            ],
+            "HBoostUclampMinFloorRange": [
+                230,
+                410
+            ],
+            "JankCheckTimeFactor": 1.0,
+            "LowFrameRateThreshold": 25,
+            "MaxRecordsNum": 30
         }
     ]
 }
