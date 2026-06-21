@@ -52,8 +52,9 @@
             ],
             "Values": [
                 "1",
+                "2",
                 "3"
-                ],
+            ],
             "DefaultIndex": 0,
             "ResetOnInit": true
         },
@@ -247,7 +248,7 @@
         }
     ],
     "Actions": [
-	{
+        {
             "PowerHint": "SUSTAINED_PERFORMANCE",
             "Node": "GPUMinFreq",
             "Value": "264000000",
@@ -268,7 +269,7 @@
         {
             "PowerHint": "INTERACTION",
             "Node": "CPUMinCores",
-            "Value": "3",
+            "Value": "2",
             "Duration": 0
         },
         {
@@ -297,6 +298,12 @@
         },
         {
             "PowerHint": "EXPENSIVE_RENDERING",
+            "Node": "GPUMinFreq",
+            "Value": "510000000",
+            "Duration": 0
+        },
+        {
+            "PowerHint": "EXPENSIVE_RENDERING",
             "Node": "ADPF_HOOK",
             "Value": "ADPF_DEFAULT",
             "Duration": 0
@@ -304,8 +311,8 @@
         {
             "PowerHint": "GAME",
             "Node": "DDRMinFreq",
-            "Value": "1353600",
-            "Duration": 1000
+            "Value": "681000",
+            "Duration": 0
         },
         {
             "PowerHint": "GAME",
@@ -319,7 +326,7 @@
             "Value": "ADPF_DEFAULT",
             "Duration": 0
         },
-	{
+        {
             "PowerHint": "LAUNCH",
             "Node": "GPUMinFreq",
             "Value": "362000000",
@@ -329,7 +336,7 @@
             "PowerHint": "LAUNCH",
             "Node": "DDRMinFreq",
             "Value": "681000",
-            "Duration": 1000
+            "Duration": 0
         },
         {
             "PowerHint": "CAMERA_STREAMING_LOW",
@@ -426,7 +433,7 @@
             "UclampMin_Init": 256,
             "UclampMin_LoadUp": 480,
             "UclampMin_LoadReset": 480,
-            "UclampMin_High":480,
+            "UclampMin_High": 480,
             "UclampMin_Low": 2,
             "UclampMax_EfficientBase": 500,
             "UclampMax_EfficientOffset": 200,
@@ -439,16 +446,16 @@
             "GpuBoost": true,
             "GpuCapacityBoostMax": 45000,
             "HeuristicBoost_On": true,
-            "HBoostModerateJankThreshold":3,
+            "HBoostModerateJankThreshold": 2,
             "HBoostOffMaxAvgDurRatio": 4.0,
             "HBoostSevereJankPidPu": 0.3,
-            "HBoostSevereJankThreshold": 5,
+            "HBoostSevereJankThreshold": 4,
             "HBoostUclampMinCeilingRange": [
                 480,
                 722
             ],
             "HBoostUclampMinFloorRange": [
-                230,
+                256,
                 410
             ],
             "JankCheckTimeFactor": 1.0,

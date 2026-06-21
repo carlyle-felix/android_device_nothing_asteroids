@@ -33,21 +33,21 @@
           "Name": "JoinCgroup",
           "Params": {
             "Controller": "cpu",
-            "Path": "top-app" 
+            "Path": "top-app"
           }
         },
         {
           "Name": "SetAttribute",
           "Params": {
             "Name": "UClampMin",
-            "Value": "2"
+            "Value": "0"
           }
         },
         {
           "Name": "SetAttribute",
           "Params": {
-            "Name": "UClampMax",
-            "Value": "100.0"
+            "Name": "UClampLatencySensitive",
+            "Value": "0"
           }
         }
       ]
@@ -59,28 +59,14 @@
           "Name": "JoinCgroup",
           "Params": {
             "Controller": "cpu",
-            "Path": "top-app" 
+            "Path": "top-app"
           }
         },
         {
           "Name": "SetAttribute",
           "Params": {
             "Name": "UClampMin",
-            "Value": "15.0"
-          }
-        },
-        {
-          "Name": "SetAttribute",
-          "Params": {
-            "Name": "UClampMax",
-            "Value": "80.0"
-          }
-        },
-        {
-          "Name": "SetAttribute",
-          "Params": {
-            "Name": "UClampLatencySensitive",
-            "Value": "1"
+            "Value": "20.0"
           }
         }
       ]
@@ -92,21 +78,14 @@
           "Name": "JoinCgroup",
           "Params": {
             "Controller": "cpu",
-            "Path": "top-app" 
+            "Path": "top-app"
           }
         },
         {
           "Name": "SetAttribute",
           "Params": {
             "Name": "UClampMin",
-            "Value": "30.0"
-          }
-        },
-        {
-          "Name": "SetAttribute",
-          "Params": {
-            "Name": "UClampMax",
-            "Value": "100.0"
+            "Value": "25.0"
           }
         },
         {
@@ -115,9 +94,15 @@
             "Name": "UClampLatencySensitive",
             "Value": "1"
           }
+        },
+        {
+          "Name": "SetAttribute",
+          "Params": {
+            "Name": "MemSwappiness",
+            "Value": "10"
+          }
         }
       ]
     }
-    
   ]
 }
