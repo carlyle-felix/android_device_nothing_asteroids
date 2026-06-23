@@ -94,13 +94,6 @@
             "Name": "UClampLatencySensitive",
             "Value": "1"
           }
-        },
-        {
-          "Name": "SetAttribute",
-          "Params": {
-            "Name": "MemSwappiness",
-            "Value": "10"
-          }
         }
       ]
     }
