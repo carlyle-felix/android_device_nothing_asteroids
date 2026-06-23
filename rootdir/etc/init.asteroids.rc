@@ -90,6 +90,12 @@ on property:vendor.all.modules.ready=1
 
     start asteroids_nfc_detect
 
+on property:sys.boot_completed=1 && property:persist.sys.sltntc.enable=0
+	stop sltntc
+
+on property:sys.boot_completed=1 && property:persist.sys.sltntc.enable=1
+	start sltntc
+    
 on property:vendor.nfc.config_file_name=*
     setprop persist.vendor.nfc.config_file_name ${vendor.nfc.config_file_name}
 
@@ -109,3 +115,10 @@ service vendor.power-hal-aidl /vendor/bin/hw/android.hardware.power-service.line
     user root
     group system readproc
     priority -20
+    
+service sltntc /system_ext/bin/sltntc
+    class hal
+    user system
+    group system readproc root
+    disabled
+
