@@ -14,7 +14,8 @@
                 "644000000",
                 "510000000",
                 "362000000",
-                "264000000"
+                "264000000",
+                "220000000"
             ],
             "ResetOnInit": true
         },
@@ -251,7 +252,7 @@
         {
             "PowerHint": "SUSTAINED_PERFORMANCE",
             "Node": "GPUMinFreq",
-            "Value": "264000000",
+            "Value": "220000000",
             "Duration": 0
         },
         {
@@ -291,6 +292,12 @@
             "Duration": 0
         },
         {
+            "PowerHint": "INTERACTION",
+            "Node": "GPUMinFreq",
+            "Value": "264000000",
+            "Duration": 0
+        },
+        {
             "PowerHint": "EXPENSIVE_RENDERING",
             "Node": "DDRMinFreq",
             "Value": "681000",
@@ -316,12 +323,6 @@
         },
         {
             "PowerHint": "GAME",
-            "Node": "ADPF_HOOK",
-            "Value": "ADPF_DEFAULT",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "FIXED_PERFORMANCE",
             "Node": "ADPF_HOOK",
             "Value": "ADPF_DEFAULT",
             "Duration": 0
